@@ -1,0 +1,10 @@
+
+torch==1.13.1          # PyTorch for deep learning tasks
+torchvision==0.14.1    # Computer vision utilities (image transformations, pre-trained models)
+opencv-python==4.6.0.66 # OpenCV for image processing (reading, manipulating images)
+matplotlib==3.6.2      # Visualization library for plotting results and saliency maps
+numpy==1.23.3          # Numerical operations (arrays, matrices)
+scikit-learn==1.0.2    # Machine learning utilities (metrics, tools for evaluation)
+Pillow==9.2.0          # Python Imaging Library for image manipulations
+scipy==1.9.1           # Scientific computing and optimization
+pandas==1.5.0          # Data manipulation (optional, for datasets)
