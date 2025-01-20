@@ -17,6 +17,9 @@ Each folder comes with its own detailed README explaining the steps to run the p
 This project is part of ongoing research. Future improvements include:
 - To further refine this approach and explore additional methods for verifying and leveraging the explainers to improve model accuracy and reliability.
 
+- ## Dataset
+You can access the dataset here: [Grasping in the Wild V2 Dataset](https://www.labri.fr/projet/AIV/dossierSiteRoBioVis/GraspingInTheWildV2.htm)
+
 ## Dependencies
 
 The following libraries are required to run the project:
