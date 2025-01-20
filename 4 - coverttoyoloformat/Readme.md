@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLO Format Conversion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
 <body>
-    <h1>YOLO Dataset Conversion and Splitting</h1>
+<h1>YOLO Format Conversion</h1>
+<p>This script converts a dataset into the YOLO format by processing bounding box annotations and saving them alongside corresponding images in the desired format.</p>
 
-  <h2>Overview</h2>
-  <p>This project provides Python scripts for:</p>
-  <ul>
-      <li>Converting bounding box annotations and images into YOLO format.</li>
-      <li>Splitting the dataset into training and testing sets with balanced class distribution.</li>
-  </ul>
+<h2>Usage</h2>
+<p>Run the script using Python with the following command:</p>
+<pre><code>python convert.py --objectpath &lt;path_to_dataset&gt; --imagesdata &lt;path_to_save_images&gt; --annotationdata &lt;path_to_save_annotations&gt; [--class_id &lt;class_id&gt;]</code></pre>
 
-  <h2>Scripts</h2>
-  <h3>1. <code>convert.py</code></h3>
-  <p>The <code>convert.py</code> script processes images and bounding box annotations from the specified input format and converts them into YOLO format. It saves the converted images and labels in separate directories.</p>
+<h2>Arguments</h2>
+<ul>
+    <li><code>--objectpath</code>: Path to the dataset containing object sequences. (Required)</li>
+    <li><code>--imagesdata</code>: Path to save the processed images. (Required)</li>
+    <li><code>--annotationdata</code>: Path to save the YOLO format annotations. (Required)</li>
+    <li><code>--class_id</code>: (Optional) Class ID for YOLO format. Default is <code>3</code>.</li>
+</ul>
 
-  <h4>Key Features:</h4>
-  <ul>
-      <li>Normalizes bounding box coordinates to YOLO format.</li>
-      <li>Supports reading from structured directories.</li>
-      <li>Ensures proper directory creation for saving processed files.</li>
-  </ul>
+<h2>Example</h2>
+<pre><code>python script.py \
+--objectpath /path/to/dataset \
+--imagesdata /path/to/images \
+--annotationdata /path/to/annotations</code></pre>
 
-  <h4>Usage:</h4>
-  <pre><code>python convert.py</code></pre>
+<h2>Output</h2>
+<p>The script saves:</p>
+<ul>
+    <li>Processed images in the specified <code>--imagesdata</code> directory.</li>
+    <li>YOLO format annotations in the specified <code>--annotationdata</code> directory.</li>
+</ul>
 
-  <h3>2. <code>train_test_split.py</code></h3>
-  <p>The <code>train_test_split.py</code> script splits the YOLO dataset into training and testing sets. It ensures a balanced class distribution by splitting files based on class prefixes.</p>
-
-  <h4>Key Features:</h4>
-  <ul>
-      <li>Splits data into training and testing sets based on a specified ratio.</li>
-      <li>Creates separate directories for images and labels in the training and testing sets.</li>
-      <li>Ensures the existence of corresponding label files before splitting.</li>
-  </ul>
-
-  <h4>Usage:</h4>
-  <pre><code>python train_test_split.py</code></pre>
-
-  <h2>Directory Structure</h2>
-  <p>After conversion and splitting, the directory structure will look like this:</p>
-  <pre><code>
-yolo_dataset/
-├── train/
-│   ├── images/
-│   └── labels/
-├── test/
-│   ├── images/
-│   └── labels/
-</code></pre>
-
-
+<h2>Notes</h2>
+<ul>
+    <li>Ensure the <code>normalize_bbox</code> function is correctly implemented in your <code>utils</code> module.</li>
+    <li>Check that the input dataset is organized as expected with bounding box files and frames.</li>
+</ul>
 </body>
 </html>
