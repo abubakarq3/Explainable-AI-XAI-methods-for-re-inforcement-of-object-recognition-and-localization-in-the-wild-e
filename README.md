@@ -14,11 +14,8 @@ Each folder comes with its own detailed README explaining the steps to run the p
 
 ## Future Work
 
-This project is part of ongoing research to refine object recognition and localization in dynamic, real-world settings. Future improvements include:
-- Enhancing the integration of XAI methods to improve model accuracy and decision-making.
-- Exploring new explainability techniques for better model transparency and validation.
-
-
+This project is part of ongoing research. Future improvements include:
+- To further refine this approach and explore additional methods for verifying and leveraging the explainers to improve model accuracy and reliability.
 
 ## Dependencies
 
