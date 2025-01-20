@@ -27,7 +27,7 @@ pip install YOLOv8-Explainer
 
 ```python
 
-python script_name.py --weight /path/to/weights.pt --img_path /path/to/images/ --save_path /path/to/save/results/ --method explainer_method
+python Generate_explainer.py --weight /path/to/weights.pt --img_path /path/to/images/ --save_path /path/to/save/results/ --method explainer_method
 
 ```
 
