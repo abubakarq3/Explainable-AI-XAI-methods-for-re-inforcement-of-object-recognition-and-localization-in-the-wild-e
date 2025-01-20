@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PCC Evaluation Script - README</title>
-</head>
+
 <body>
 <h1>PCC Evaluation Script</h1>
 <p>This script computes the Pearson Correlation Coefficient (PCC) between pairs of images from two directories (saliency maps and explainer maps). The results are saved to a CSV file.</p>
