@@ -1,28 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOLO Format Conversion</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        code {
-            font-family: "Courier New", Courier, monospace;
-            color: #d63384;
-        }
-    </style>
-</head>
+
 <body>
 <h1>YOLO Format Conversion</h1>
 <p>This script converts a dataset into the YOLO format by processing bounding box annotations and saving them alongside corresponding images in the desired format.</p>
